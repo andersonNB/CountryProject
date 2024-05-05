@@ -4,6 +4,7 @@ import { HomePageComponent } from './shared/pages/home-page/home-page.component'
 import { AboutPageComponent } from './shared/pages/about-page/about-page.component';
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
 
+//loadChildren implementa la carga perezosa
 const routes: Routes = [
   {
     path:'',
@@ -23,7 +24,7 @@ const routes: Routes = [
   },
   {
     path:'**',
-    redirectTo: ''
+    redirectTo: 'countries'
   }
 ];
 //forRoot para dar a entender que es del modulo principal(app)
