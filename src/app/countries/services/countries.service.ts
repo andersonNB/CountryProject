@@ -12,6 +12,14 @@ export class CountriesService {
     constructor(private http: HttpClient) { }
 
 
+
+    searchCountryAlphaCode(code:string):Observable<Country[]>{
+        return this.http.get<Country[]>(`${this.apiUrl}/alpha/${code}`)
+        .pipe(
+            catchError(error=> of([]))
+        )
+    }
+
     searchCapital(term:string):Observable<Country[]> {
         return this.http.get<Country[]>(`${this.apiUrl}/capital/${term}`)
         .pipe(
@@ -24,10 +32,16 @@ export class CountriesService {
 
     searchCountry(country:string):Observable<Country[]>{
         return this.http.get<Country[]>(`${this.apiUrl}/name/${country}`)
+        .pipe(
+            catchError(error=> of([]))
+        )
     }
 
 
     public searchRegion(region:string):Observable<Country[]>{
         return this.http.get<Country[]>(`${this.apiUrl}/region/${region}`)
+        .pipe(
+            catchError(error=> of([]))
+        )
     }
 }
