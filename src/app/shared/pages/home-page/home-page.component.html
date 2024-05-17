@@ -1,1 +1,38 @@
-<p>home-page works!</p>
+<h4>Agregar Articulos</h4>
+<form  class="row justify-content-center" (ngSubmit)="submitArticles()"  >
+    <input 
+    [(ngModel)]="articles.title"
+    name="title"
+    class="form-control mb-2"
+     type="text" 
+     placeholder="titulo">
+    <input 
+    [(ngModel)]="articles.description"
+    class="form-control mb-2" 
+    type="text" 
+    placeholder="descripcion"
+    name="description"
+    >
+    <input 
+    [(ngModel)]="articles.price"
+    class="form-control mb-2" 
+    type="text" 
+    placeholder="precio"
+    name="price"
+    >
+    <input 
+    class="form-control"
+     type="file" 
+     [(ngModel)]="articles.img"
+     (change)="onChangeImage($event)"
+     name="image"
+       >
+
+    <button class="btn btn-primary" type="submit"
+    style="width: 400px;"
+    >Agregar</button>
+</form>
+
+ <list-articles [articlesListArticleComponent]="listArticles"  (setListArticles)="submitArticles()" ></list-articles>
+
+{{ articles | json }}

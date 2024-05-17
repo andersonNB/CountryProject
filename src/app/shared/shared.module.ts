@@ -6,6 +6,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { FormsModule } from '@angular/forms';
+import { ListArticlesComponent } from './components/list-articles/list-articles.component';
 
 
 
@@ -16,10 +18,12 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     SidebarComponent,
     ContactPageComponent,
     SearchBoxComponent,
+    ListArticlesComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports:[
     AboutPageComponent,
