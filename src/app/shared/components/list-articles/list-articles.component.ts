@@ -13,9 +13,9 @@ export class ListArticlesComponent {
 
 
 
-   public setListArticles(articles: Article[]){
-     this.articlesListArticleComponent = articles;
+  //  public setListArticles(articles: Article[]){
+  //    this.articlesListArticleComponent = articles;
 
-   }
+  //  }
 
 }

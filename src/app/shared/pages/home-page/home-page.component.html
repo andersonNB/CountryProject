@@ -16,14 +16,14 @@
     <input 
     [(ngModel)]="articles.price"
     class="form-control mb-2" 
-    type="text" 
+    type="number" 
     placeholder="precio"
     name="price"
     >
     <input 
     class="form-control"
      type="file" 
-     [(ngModel)]="articles.img"
+     
      (change)="onChangeImage($event)"
      name="image"
        >
@@ -33,6 +33,6 @@
     >Agregar</button>
 </form>
 
- <list-articles [articlesListArticleComponent]="listArticles"  (setListArticles)="submitArticles()" ></list-articles>
+ <list-articles [articlesListArticleComponent]="listArticles"></list-articles>
 
-{{ articles | json }}
+<!-- {{ articles | json }} -->

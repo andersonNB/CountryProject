@@ -1,5 +1,8 @@
-
 <h2>List Articles:</h2>
-<div>
-    {{articlesListArticleComponent | json}}
+{{ articlesListArticleComponent | json }}
+<div *ngFor="let articles of articlesListArticleComponent">
+  <h4>{{ articles.title }}</h4>
+  <h3>{{ articles.description }}</h3>
+  <h3>{{ articles.price | number }}</h3>
+  <img [src]="articles.img" [alt]="articles.title" style="width: 100px; height: 100px" />
 </div>
